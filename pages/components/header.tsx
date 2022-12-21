@@ -1,6 +1,11 @@
 import Head from "next/head"
 import NavBar from "./navbar"
 
+/**
+ * 
+ * @returns The Header portion of the website
+ */
+
 export default function Header() {
     return (
         <div>
