@@ -18,14 +18,16 @@ export default function List() {
                 <h2 className='text-3xl mt-3 mb-3'>Your list</h2>
                 <div>
                     <table className='w-full'>
-                        <tr>
-                            <th className={table_header_styling}>Rank</th>
-                            <th className={table_header_styling}>Name</th>
-                            <th className={table_header_styling}>Description</th>
-                        </tr>
-                        {GetUserMovies().map(function (m: Movie) {
-                            return (<MovieEntry movieName={m.GetName()} />)
-                        })}
+                        <tbody>
+                            <tr>
+                                <th className={table_header_styling}>Rank</th>
+                                <th className={table_header_styling}>Name</th>
+                                <th className={table_header_styling}>Description</th>
+                            </tr>
+                            {GetUserMovies().map(function (m: Movie) {
+                                return (<MovieEntry movieName={m.GetName()} />)
+                            })}
+                        </tbody>
                     </table>
                 </div>
             </div>
