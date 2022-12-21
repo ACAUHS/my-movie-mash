@@ -3,6 +3,8 @@
  * @returns Makes the navigation bar to the website.
  */
 
+//make buttons hover text and bigger!
+
 export default function NavBar () {
     const buttonStyle = ' rounded-full bg-sky-600 p-6 transition '
     return (
@@ -11,10 +13,7 @@ export default function NavBar () {
             <ol className="flex gap-6">
                 <li className={buttonStyle}>
                     <a href='/list'>
-                        <div className="transition-all transform">
-                            <div>
-
-                            </div>
+                        <div className="transition-all transform"> 
                         </div>
                     </a>
                 </li>
@@ -25,7 +24,7 @@ export default function NavBar () {
                     <a href='/random-movie'></a>
                 </li>
             </ol>
-            <input type="search" id="movie-search" className="bg-sky-100 border-2 border-sky-600 rounded-full"/>
+            <input type="search" id="movie-search" className="bg-sky-100 border-2 border-sky-600 rounded-md"/>
         </div>
     )
 }
