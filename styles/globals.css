@@ -92,4 +92,11 @@ a {
 
 @layer components {
     
+    .navbar-icon {
+        @apply flex rounded-full text-white bg-sky-600 pt-4 pr-4 pl-4 pb-10
+        text-center
+        shrink-0 min-h-min max-h-8 hover:cursor-pointer hover:ring-2
+         ring-sky-800 hover:transition-all hover:ease-in-out hover:duration-150
+         active:bg-sky-700
+    }
 }
