@@ -79,7 +79,7 @@ export default function List() {
                     </div>
 
                 </div>
-                <div className='mb-5'>
+                <div className='mb-5 overflow-scroll'>
                     <table className='w-full'>
                         <tbody>
                             <tr>
