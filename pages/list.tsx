@@ -11,6 +11,14 @@ import WatchableEntry from "./components/watchable_entry";
 export default function List() {
     const table_header_styling: string = "text-left font-normal text-xl border p-5";
 
+    function TableHeader(props: { children: any }) {
+        return (
+            <th className={table_header_styling}>
+                {props.children}
+            </th>
+        )
+    }
+
     return (
         <div>
             <Header />
@@ -20,10 +28,10 @@ export default function List() {
                     <table className='w-full'>
                         <tbody>
                             <tr>
-                                <th className={table_header_styling}>Rank</th>
-                                <th className={table_header_styling}>Name</th>
-                                <th className={table_header_styling}>Description</th>
-                                <th className={table_header_styling}>Type</th>
+                                <TableHeader>Rank</TableHeader>
+                                <TableHeader>Name</TableHeader>
+                                <TableHeader>Description</TableHeader>
+                                <TableHeader>Type</TableHeader>
                             </tr>
                             {GetUserWatchables().map(function (m: Watchable, index: number) {
                                 return (<WatchableEntry order={index + 1} name={m.GetName()} type={m.GetType()} />)
