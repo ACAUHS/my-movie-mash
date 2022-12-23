@@ -80,7 +80,7 @@ export default function List() {
                             <tr>
                                 <TableHeader>Number</TableHeader>
                                 <TableHeader>Name</TableHeader>
-                                <TableHeader>Description</TableHeader>
+                                <TableHeader>Rating</TableHeader>
                                 <TableHeader>Type</TableHeader>
                             </tr>
                             {ForageWatchableInterface.GetUserWatchablesSorted(GetSortLambda(sort)).filter(GetFilterLambda(filter)).map(function (m: Watchable, index: number) {
