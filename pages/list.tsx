@@ -1,11 +1,7 @@
 import Header from "./components/header";
-//import { GetUserWatchables } from "./logic/user_storage";
 import Watchable from "./logic/watchable";
 import WatchableEntry from "./components/watchable_entry";
-
-function GetUserWatchables() {
-    return []
-}
+import { ForageWatchableInterface } from "./logic/user_storage";
 
 /**
  * The list page where users can add or remove movies from their list. Uses localStorage to achieve database functions.
@@ -63,7 +59,7 @@ export default function List() {
                                 <TableHeader>Description</TableHeader>
                                 <TableHeader>Type</TableHeader>
                             </tr>
-                            {GetUserWatchables().map(function (m: Watchable, index: number) {
+                            {ForageWatchableInterface.GetUserWatchables().map(function (m: Watchable, index: number) {
                                 return (<WatchableEntry order={index + 1} name={m.GetName()} type={m.GetType()} />)
                             })}
                         </tbody>
