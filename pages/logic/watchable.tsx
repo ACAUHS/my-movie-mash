@@ -19,4 +19,6 @@ export default abstract class Watchable {
     public GetName(): string {
         return this.name;
     }
+
+    abstract GetType(): string;
 }
