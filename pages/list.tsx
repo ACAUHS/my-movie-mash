@@ -58,18 +58,23 @@ export default function List() {
             <div className='m-auto w-4/6'>
                 <div className='text-center'><h2 className='text-5xl mt-3 mb-3'>Your list</h2></div>
                 <div className='mt-5 mb-5'>
-                    <div className='flex'>
-                        <span className='m-3 text-xl'>Filter:</span>
-                        <div className='flex gap-3 mt-3 mb-3'>
-                            <TableSortButton onClick={() => { setFilter("Movie") }}>Movies</TableSortButton>
-                            <TableSortButton onClick={() => { setFilter("TV Show") }}>TV Shows</TableSortButton>
-                            <TableSortButton onClick={() => { setFilter("none") }}>All</TableSortButton>
+                    <div className='max-w-full flex flex-wrap'>
+                        <div className='flex'>
+                            <span className='m-3 text-xl'>Filter:</span>
+                            <div className='flex gap-3 mt-3 mb-3'>
+                                <TableSortButton onClick={() => { setFilter("Movie") }}>Movies</TableSortButton>
+                                <TableSortButton onClick={() => { setFilter("TV Show") }}>TV Shows</TableSortButton>
+                                <TableSortButton onClick={() => { setFilter("none") }}>All</TableSortButton>
+                            </div>
                         </div>
-                        <span className='m-3 text-xl'>Sort by:</span>
-                        <div className='flex gap-3 mt-3 mb-3'>
-                            <TableSortButton onClick={() => { setSort("name") }}>Name</TableSortButton>
-                            <TableSortButton onClick={() => { setSort("rating") }}>Rating</TableSortButton>
-                            <TableSortButton onClick={() => { setSort("none") }}>None</TableSortButton>
+
+                        <div className='flex'>
+                            <span className='m-3 text-xl'>Sort by:</span>
+                            <div className='flex gap-3 mt-3 mb-3'>
+                                <TableSortButton onClick={() => { setSort("name") }}>Name</TableSortButton>
+                                <TableSortButton onClick={() => { setSort("rating") }}>Rating</TableSortButton>
+                                <TableSortButton onClick={() => { setSort("none") }}>None</TableSortButton>
+                            </div>
                         </div>
                     </div>
 
