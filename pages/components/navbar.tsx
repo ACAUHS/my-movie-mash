@@ -24,13 +24,13 @@ export default function NavBar () {
             <a href='../'><header className="text-xl font-bold text-sky-600 mt-2">My Movie Mash</header></a>
             <div className="flex gap-6 justify-between">
                 <a href='/list'>
-                    <NavBarIcon icon={<HiBars3 size="25" />} />
+                    <NavBarIcon icon={<HiBars3 size="25" />} text ='Your list' />
                 </a>
                 <a href='/random-show'>
-                    <NavBarIcon icon={<FiTv size="25" />} />
+                    <NavBarIcon icon={<FiTv size="25" />} text = 'Random show'/>
                 </a>
                 <a href='/random-movie'>
-                    <NavBarIcon icon={<FiFilm size="25" />} />
+                    <NavBarIcon icon={<FiFilm size="25" />} text = 'Random movie'/>
                 </a>
             </div>
             <input type="search" id="movie-search" className="bg-sky-100 border-2 border-sky-600 rounded-md max-h-10 pt-6 mt-1"/>
@@ -44,11 +44,12 @@ export default function NavBar () {
  * @param iconName 
  * @returns Imports an icon from React Icons
  */
-const NavBarIcon = ({ icon }) => (
-    <div className='navbar-icon'>
+const NavBarIcon = ({ icon, text = '' }) => (
+    <div className='navbar-icon group'>
         {icon}
 
-        <span className = "navbar-name">
+        <span className = "navbar-name group-hover:scale-100">
+            {text}
         </span>
     </div>
 )

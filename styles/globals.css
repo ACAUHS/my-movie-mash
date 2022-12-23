@@ -93,10 +93,13 @@ a {
 @layer components {
     
     .navbar-icon {
-        @apply flex rounded-full text-white bg-sky-600 pt-4 pr-4 pl-4 pb-10
-        text-center
-        shrink-0 min-h-min max-h-8 hover:cursor-pointer hover:ring-2
-         ring-sky-800 hover:transition-all hover:ease-in-out hover:duration-150
-         active:bg-sky-700
+        @apply relative flex rounded-3xl text-white bg-sky-600 pt-4 pr-4 pl-4 pb-10
+        text-center shrink-0 max-h-8 hover:cursor-pointer hover:ring-2
+         ring-sky-800 hover:rounded-xl transition-all duration-300 hover:bg-sky-700
+    }
+
+    .navbar-name {
+        @apply absolute w-auto p-2 m-2 min-w-max top-14 -left-2 rounded-lg shadow-md text-white
+        bg-sky-600 opacity-100 bg-opacity-75 text-opacity-100 text-xs font-semibold transition-all duration-100 scale-0 origin-top
     }
 }
