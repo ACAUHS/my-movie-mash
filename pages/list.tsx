@@ -1,7 +1,11 @@
 import Header from "./components/header";
-import { GetUserWatchables } from "./logic/user_storage";
+//import { GetUserWatchables } from "./logic/user_storage";
 import Watchable from "./logic/watchable";
 import WatchableEntry from "./components/watchable_entry";
+
+function GetUserWatchables() {
+    return []
+}
 
 /**
  * The list page where users can add or remove movies from their list. Uses localStorage to achieve database functions.
@@ -11,7 +15,7 @@ import WatchableEntry from "./components/watchable_entry";
 export default function List() {
     const table_header_styling: string = "text-left font-normal text-xl border p-5";
 
-    function TableHeader(props: { children: any }) {
+    function TableHeader(props: { children: React.ReactNode }) {
         return (
             <th className={table_header_styling}>
                 {props.children}
@@ -19,7 +23,7 @@ export default function List() {
         )
     }
 
-    function TableSortButton(props: { children: any }) {
+    function TableSortButton(props: { children: React.ReactNode }) {
         return (
             <div className="bg-sky-300 w-fit p-3 rounded-md text-white font-bold text-xl">
                 {props.children}
@@ -35,7 +39,7 @@ export default function List() {
                 <div className='mt-5 mb-5'>
                     <div>
                         <span className='text-xl'>Filter:</span>
-                        <div className='flex gap-3 mt-3'>
+                        <div className='flex gap-3 mt-3 mb-3'>
                             <TableSortButton>Movies</TableSortButton>
                             <TableSortButton>TV Shows</TableSortButton>
                         </div>
@@ -43,7 +47,7 @@ export default function List() {
                     </div>
                     <div>
                         <span className='text-xl'>Sort by:</span>
-                        <div className='flex gap-3 mt-3'>
+                        <div className='flex gap-3 mt-3 mb-3'>
                             <TableSortButton>Name</TableSortButton>
                             <TableSortButton>Type</TableSortButton>
                         </div>
