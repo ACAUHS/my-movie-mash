@@ -1,7 +1,7 @@
 import Header from "./components/header";
-import { GetUserMovies } from "./logic/user_storage";
-import Movie from "./logic/movie";
-import MovieEntry from "./components/movie_entry";
+import { GetUserWatchables } from "./logic/user_storage";
+import Watchable from "./logic/watchable";
+import WatchableEntry from "./components/watchable_entry";
 
 /**
  * The list page where users can add or remove movies from their list. Uses localStorage to achieve database functions.
@@ -23,9 +23,10 @@ export default function List() {
                                 <th className={table_header_styling}>Rank</th>
                                 <th className={table_header_styling}>Name</th>
                                 <th className={table_header_styling}>Description</th>
+                                <th className={table_header_styling}>Type</th>
                             </tr>
-                            {GetUserMovies().map(function (m: Movie) {
-                                return (<MovieEntry movieName={m.GetName()} />)
+                            {GetUserWatchables().map(function (m: Watchable, index: number) {
+                                return (<WatchableEntry order={index + 1} name={m.GetName()} type={m.GetType()} />)
                             })}
                         </tbody>
                     </table>
