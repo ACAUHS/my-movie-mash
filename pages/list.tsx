@@ -19,16 +19,42 @@ export default function List() {
         )
     }
 
+    function TableSortButton(props: { children: any }) {
+        return (
+            <div className="bg-sky-300 w-fit p-3 rounded-md text-white font-bold text-xl">
+                {props.children}
+            </div>
+        )
+    }
+
     return (
         <div>
             <Header />
             <div className='m-auto w-4/6'>
-                <h2 className='text-3xl mt-3 mb-3'>Your list</h2>
-                <div>
+                <div className='text-center'><h2 className='text-5xl mt-3 mb-3'>Your list</h2></div>
+                <div className='mt-5 mb-5'>
+                    <div>
+                        <span className='text-xl'>Filter:</span>
+                        <div className='flex gap-3 mt-3'>
+                            <TableSortButton>Movies</TableSortButton>
+                            <TableSortButton>TV Shows</TableSortButton>
+                        </div>
+
+                    </div>
+                    <div>
+                        <span className='text-xl'>Sort by:</span>
+                        <div className='flex gap-3 mt-3'>
+                            <TableSortButton>Name</TableSortButton>
+                            <TableSortButton>Type</TableSortButton>
+                        </div>
+                    </div>
+
+                </div>
+                <div className='mb-5'>
                     <table className='w-full'>
                         <tbody>
                             <tr>
-                                <TableHeader>Rank</TableHeader>
+                                <TableHeader>Number</TableHeader>
                                 <TableHeader>Name</TableHeader>
                                 <TableHeader>Description</TableHeader>
                                 <TableHeader>Type</TableHeader>
