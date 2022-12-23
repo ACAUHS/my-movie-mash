@@ -33,19 +33,16 @@ export default function List() {
             <div className='m-auto w-4/6'>
                 <div className='text-center'><h2 className='text-5xl mt-3 mb-3'>Your list</h2></div>
                 <div className='mt-5 mb-5'>
-                    <div>
+                    <div className='flex'>
                         <span className='text-xl'>Filter:</span>
                         <div className='flex gap-3 mt-3 mb-3'>
                             <TableSortButton>Movies</TableSortButton>
                             <TableSortButton>TV Shows</TableSortButton>
                         </div>
-
-                    </div>
-                    <div>
                         <span className='text-xl'>Sort by:</span>
                         <div className='flex gap-3 mt-3 mb-3'>
                             <TableSortButton>Name</TableSortButton>
-                            <TableSortButton>Type</TableSortButton>
+                            <TableSortButton>Rating</TableSortButton>
                         </div>
                     </div>
 
