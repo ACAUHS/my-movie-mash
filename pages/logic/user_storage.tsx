@@ -60,7 +60,7 @@ export class ForageWatchableInterface {
      * @param sort_lambda the sort lambda that will be operated. If a < b == true, then it is the case that a will come before b.
      * @returns 
      */
-    public static GetUserWatchablesSorted(sort_lambda: (a: Watchable, b: Watchable) => boolean): Array<Watchable> {
-        return []
+    public static GetUserWatchablesSorted(sort_lambda: (a: Watchable, b: Watchable) => number): Array<Watchable> {
+        return this.GetUserWatchables().sort(sort_lambda);
     }
 }
