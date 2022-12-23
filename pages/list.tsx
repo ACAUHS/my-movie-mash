@@ -69,6 +69,7 @@ export default function List() {
                         <div className='flex gap-3 mt-3 mb-3'>
                             <TableSortButton onClick={() => { setSort("name") }}>Name</TableSortButton>
                             <TableSortButton onClick={() => { setSort("rating") }}>Rating</TableSortButton>
+                            <TableSortButton onClick={() => { setSort("none") }}>None</TableSortButton>
                         </div>
                     </div>
 
