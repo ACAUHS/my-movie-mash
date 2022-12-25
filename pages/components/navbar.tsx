@@ -6,9 +6,9 @@ const buttonStyle = 'group rounded-full text-white bg-sky-600 p-6 shrink-0 min-h
 
 /**
  * @todo 
- * 
- * add placeholder text to search bar
- * add button indicating search beside search bar
+ * Center buttons (even though they look centered)
+ * add bottom border to nav?
+ * change item of list?
  * 
  * @returns Makes the navigation bar to the website.
  */
@@ -47,7 +47,7 @@ export default function NavBar () {
 
             {/** search bar for medium screens+ */}
             <div className="hidden md:inline-block bg-sky-100 border-2 border-sky-600 rounded-md max-h-8 shrink  self-center">
-                <input type="search" id="movie-search" placeholder="Search" className="bg-sky-100 outline-none rounded-md pl-3"/>
+                <input type="search" id="movie-search" placeholder="Search" className="bg-sky-100 outline-none rounded-md pl-2 text-slate-500"/>
                 <button id='search-button' type="submit" className="text-l pr-1.5 pt-1.5 pb-1.5 pl-1 mt-0 border-sky-600 "><GoSearch /></button>
             </div>
         </div>
