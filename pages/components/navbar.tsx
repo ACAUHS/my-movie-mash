@@ -21,7 +21,7 @@ export default function NavBar () {
             {/** navbar for medium screens and above */}
             <div className="hidden md:flex gap-6 justify-between">
                 <a href='/list'>
-                    <NavBarIcon icon={<HiBars3 size="25" />} text ='Your list' />
+                    <NavBarIcon icon={<HiBars3 size="25" />} text ='My list' />
                 </a>
                 <a href='/random-show'>
                     <NavBarIcon icon={<FiTv size="25" />} text = 'Random show'/>
